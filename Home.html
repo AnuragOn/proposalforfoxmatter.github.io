@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive Website</title>
+  <style>
+    body {
+      background-image: url("business-people-board-room-meeting.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    
+    /* Add more CSS styling here */
+
+    .logo {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 0;
+        /* Adjust the width and height to control the logo size */
+        width: 150px;
+        height: 150px;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    
+    .hamburger-menu {
+      display: inline-block;
+      cursor: pointer;
+      padding: 10px;
+      float: right;
+    }
+    
+    .hamburger-menu span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #fff; /* Changed the background color to white */
+      margin-bottom: 5px;
+    }
+    
+    .dropdown-menu {
+      display: none;
+      position: fixed;
+      top: 300px; /* Adjust the top position as needed */
+      right: 0;
+      transform: translateY(-100%);
+      text-align: left;
+      background-color: #fff;
+      padding: 50px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      width: 200px;
+      list-style-type: none;
+    }
+    
+    .dropdown-menu li {
+      margin-bottom: 10px;
+      text-align: left;
+    }
+    
+    .dropdown-menu a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      padding: 5px;
+    }
+    
+    .dropdown-menu a:hover {
+      color: #000;
+    }
+    
+    .banner {
+      width: 100%;
+      height: 300px;
+      background-image: url("banner-image.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .video-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: -3cm;
+    }
+    
+    .video {
+      width: 80%;
+      max-width: 800px;
+    }
+
+    .footer {
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="\Images\MatterfoxLogo_not.png" alt="Logo" width="50" height="50">
+    </div>
+    <nav>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="dropdown-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="banner">
+    <p>We Provide Clarity and Consistency for your startup</p>
+  </div>
+
+  <div class="video-container">
+    <video class="video" controls>
+      <source src="\Images\Phonexa - Brand Animation.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
+  <!-- Add the rest of your website content here -->
+  
+  <script>
+    // JavaScript code for hamburger menu functionality
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const menuItems = document.querySelectorAll('.dropdown-menu a');
+
+    hamburgerMenu.addEventListener('click', function() {
+      dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    menuItems.forEach(function(item) {
+      item.addEventListener('click', function() {
+        dropdownMenu.style.display = 'none';
+      });
+    });
+
+    const homeMenuItem = document.querySelector('.dropdown-menu a[href="#"]');
+    homeMenuItem.addEventListener('click', function(e) {
+      e.preventDefault();
+      dropdownMenu.style.display = 'none';
+      hamburgerMenu.style.display = 'inline-block';
+    });
+  </script>
+</body>
+</html>
