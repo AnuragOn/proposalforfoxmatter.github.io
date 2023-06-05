@@ -1,20 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Responsive Website Background with GIF</title>
+  <title>Responsive Website Background with GIF and Neon Sign Effect</title>
   <style>
+    @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+
     body {
-      background-image: url('https://media.giphy.com/media/vHGdKzRDLTxe/giphy.gif');
+      background-image: url('https://media.giphy.com/media/F34ZKQnr3TUFURxyJK/giphy.gif');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      height: 70vh;
+      height: 100vh;
       margin: 0;
       padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Kaushan Script', cursive;
+    }
+
+    .neon-text {
+      color: white;
+      font-size: 6rem;
+      font-weight: 300; /* Adjust font weight to make it thinner */
+      text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold, 0 0 20px gold, 0 0 25px gold;
+      animation: neon-animation 2s ease-in-out infinite, glitter-animation 1.5s infinite;
+      transform: skewY(-10deg) translateX(10%);
+      transform-origin: top right;
+    }
+
+    @keyframes neon-animation {
+      0%, 100% {
+        text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold, 0 0 20px gold, 0 0 25px gold;
+      }
+      50% {
+        text-shadow: none; /* Turn off text-shadow to create an "off" effect */
+      }
+    }
+
+    @keyframes glitter-animation {
+      0%, 100% {
+        text-shadow: 0 0 2px gold, 0 0 5px gold, 0 0 10px gold, 0 0 15px gold, 0 0 20px gold, 0 0 25px gold, 0 0 30px gold, 0 0 35px gold, 0 0 40px gold, 0 0 45px gold, 0 0 50px gold, 0 0 55px gold;
+      }
+      50% {
+        text-shadow: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .neon-text {
+        font-size: 4rem;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Your website content goes here -->
+  <h1 class="neon-text">OutOfMemory</h1>
 </body>
 </html>
