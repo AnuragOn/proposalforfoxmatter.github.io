@@ -19,47 +19,5 @@
       font-family: 'Kaushan Script', cursive;
     }
 
-    .neon-text {
-      color: white;
-      font-size: 6rem;
-      font-weight: 300; /* Adjust font weight to make it thinner */
-      text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold, 0 0 20px gold, 0 0 25px gold;
-      animation: neon-animation 2s ease-in-out infinite, glitter-animation 1.5s infinite;
-      transform: skewY(-10deg) translateX(10%);
-      transform-origin: top right;
-    }
-
-    @keyframes neon-animation {
-      0%, 100% {
-        text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold, 0 0 20px gold, 0 0 25px gold;
-      }
-      50% {
-        text-shadow: none; /* Turn off text-shadow to create an "off" effect */
-      }
-    }
-
-    @keyframes glitter-animation {
-      0%, 100% {
-        text-shadow: 0 0 2px gold, 0 0 5px gold, 0 0 10px gold, 0 0 15px gold, 0 0 20px gold, 0 0 25px gold, 0 0 30px gold, 0 0 35px gold, 0 0 40px gold, 0 0 45px gold, 0 0 50px gold, 0 0 55px gold;
-      }
-      50% {
-        text-shadow: none;
-      }
-    }
-
-    @media (max-width: 768px) {
-      body {
-        /*background-image: url('https://media.giphy.com/media/3og0Iv3nU9wfCXNQoU/giphy.gif');
-        background-size: contain;
-        background-position: top;
-      }
-      .neon-text {
-        font-size: 4rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  <h1 class="neon-text">OutOfMemory</h1>
-</body>
+ 
 </html>
